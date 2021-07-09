@@ -1,8 +1,15 @@
 {% extends 'base.html' %}
 {% block contenido %}
-    {% if enalces %}
-        {% for e in enlaces %}
-            <h1>{{e.enlace}}</h1>
+            <table style="width:100%">
+                <tr>
+                    <th>Enlaces</th>
+                    <th>Descripcion</th>
+                </tr>
+                {% for e in enlaces %}
+                <tr>
+                    <td><a href="{{e.enlace}}">{{e.enlace}}</a></td>
+                    <td>{{e.descripcion}}</td>
+                </tr>
         {% endfor %}
-    {% endif %}
+            </table>
 {% endblock contenido %}

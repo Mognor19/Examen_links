@@ -19,5 +19,5 @@ from app_links import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('links/', views.Enlace, name='enlaces'),
+    path('', views.Enlaces, name='enlaces'),
 ]
